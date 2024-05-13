@@ -11,17 +11,22 @@ const SearchBar = ({ whenSubmit }) => {
 
   return (
     <div className="ui segment" style={{ backgroundColor: "#000" }}>
-      <form className="ui form">
-        <div className="field ">
-          <label className="input_label" style={{ color: "white"}}>Search Image</label>
+      <form className="ui form" onSubmit={(e) => {
+        e.preventDefault()
+        setText(text)
+      }}>
+        <div className="field">
+          <label className="input_label" style={{ color: "white" }}>Search Image</label>
           <input
             type="text"
             onChange={(e) => {
               e.preventDefault()
               setText(e.target.value)
             }}
+            value={text}
             placeholder="Search any Image..."
             className="bg-black input_search"
+
           />
         </div>
       </form>
