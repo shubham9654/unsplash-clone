@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+}
+
 .image-list {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
@@ -7,4 +15,17 @@
 
 .image-list img {
   width: 250px;
+}
+
+.ui.segment {
+  padding: 0px;
+}
+
+.input_label {
+  font-size: 24px !important;
+  margin-bottom: 18px;
+}
+
+.input_search {
+  font-size: 17px !important;
 }
