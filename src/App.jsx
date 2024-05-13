@@ -26,7 +26,14 @@ const App = () => {
   return (
     <div className="ui container" style={{ margin: "5vh" }}>
       <SearchBar whenSubmit={handleSearchSubmit} />
-      <ImageList images={images} />
+      {
+        images.length > 0 ? (
+          <ImageList images={images} />
+
+        ) : <div className='w-full flex items-center justify-center mt-5 md:mt-20'>
+          <img src='/giphy.webp' className='w-[400px]' />
+        </div>
+      }
     </div>
   );
 };

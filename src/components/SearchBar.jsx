@@ -5,7 +5,6 @@ const SearchBar = ({ whenSubmit }) => {
   const [text, setText] = useState();
   const [value] = useDebounce(text, 1000);
 
-
   useEffect(() => {
     whenSubmit(value)
   }, [value])

@@ -13,7 +13,7 @@ const ImageCard = ({ image }) => {
   const { description, urls } = image;
 
   return (
-    <div style={{ gridRowEnd: `span ${spans}` }}>
+    <div style={{ gridRowEnd: `span ${spans}` }} className='relative'>
       <img
         onLoad={onImgLoad}
         ref={imageRef}
